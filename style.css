@@ -1,0 +1,220 @@
+/* ==================== VARIABLES ==================== */
+
+:root {
+  --azul: #0D3B8E;
+  --verde: #1E9E5A;
+}
+
+
+/* ==================== GENERAL ==================== */
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #1F2937;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+h1,
+h2 {
+  color: var(--azul);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+
+/* ==================== MENÚ ==================== */
+
+.navbar {
+  background-color: var(--azul);
+}
+
+
+/* ==================== INICIO ==================== */
+
+#inicio {
+  padding-top: 8rem;
+}
+
+
+/* Contenedor del texto + imagen */
+
+.inicio-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+
+/* Texto */
+
+.inicio-texto {
+  flex: 1;
+}
+
+#inicio h1 {
+  font-size: 2.5rem;
+}
+
+
+/* Imagen principal */
+
+.inicio-imagen {
+  flex: 0 0 280px;
+}
+
+.inicio-imagen img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+
+/* Botones */
+
+#inicio .btn {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+
+
+/* ==================== BENEFICIOS ==================== */
+
+.beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.beneficio {
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid #D5DCE8;
+  border-radius: 10px;
+}
+
+.beneficio h3 {
+  font-size: 1.1rem;
+  color: var(--azul);
+}
+
+
+/* ==================== PROGRAMAS ==================== */
+
+.programas {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(260px, 1fr)
+  );
+}
+
+
+/* Tarjetas */
+
+.card-programa {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+/* Movimiento al pasar el mouse */
+
+.card-programa:hover {
+  transform: translateY(-4px);
+}
+
+
+/* Imágenes de los programas */
+
+.imagen-programa {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ==================== FORMULARIO ==================== */
+
+#formRegistro {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn-success {
+  background-color: var(--verde);
+  border-color: var(--verde);
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer {
+  background: #0F1E3D;
+  color: #fff;
+  padding: 1.5rem 0;
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.footer-flex p {
+  margin: 0;
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+
+  /* Inicio en celular */
+
+  .inicio-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio-imagen {
+    flex: none;
+  }
+
+  .inicio-imagen img {
+    width: 240px;
+    height: 150px;
+  }
+
+  #inicio h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  /* Programas */
+
+  .imagen-programa {
+    height: 130px;
+  }
+
+}
